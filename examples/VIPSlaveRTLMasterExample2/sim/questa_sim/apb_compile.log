@@ -1,0 +1,60 @@
+QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
+Start time: 17:13:45 on Aug 06,2025
+vlog -sv "+acc" "+cover" "+fcover" -l apb_compile.log -f ../apb_compile.f 
+-- Compiling package apb_global_pkg
+-- Compiling package apb_master_pkg
+** Note: (vlog-2286) ../../../../src/hvl_top/master/apb_master_pkg.sv(13): Using implicit +incdir+/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package apb_global_pkg
+-- Compiling package apb_slave_pkg
+-- Compiling package apb_master_seq_pkg
+-- Importing package apb_master_pkg
+-- Compiling package apb_slave_seq_pkg
+-- Importing package apb_slave_pkg
+-- Compiling package apb_env_pkg
+-- Compiling package Master_VIP_Slave_IP_virtual_seq_pkg
+-- Importing package apb_env_pkg
+-- Importing package apb_master_seq_pkg
+-- Importing package apb_slave_seq_pkg
+-- Compiling package Master_VIP_Slave_IP_test_pkg
+-- Importing package Master_VIP_Slave_IP_virtual_seq_pkg
+-- Compiling package apb_if_sv_unit
+-- Importing package apb_global_pkg
+-- Compiling interface apb_if
+-- Compiling package apb_master_driver_bfm_sv_unit
+-- Importing package apb_global_pkg
+-- Compiling interface apb_master_driver_bfm
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package apb_master_pkg
+-- Compiling package apb_master_monitor_bfm_sv_unit
+-- Importing package apb_global_pkg
+-- Compiling interface apb_master_monitor_bfm
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package apb_master_pkg
+-- Compiling module apb_master_agent_bfm
+-- Compiling package apb_slave_driver_bfm_sv_unit
+-- Importing package apb_global_pkg
+-- Compiling interface apb_slave_driver_bfm
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package apb_slave_pkg
+-- Compiling package apb_slave_monitor_bfm_sv_unit
+-- Importing package apb_global_pkg
+-- Compiling interface apb_slave_monitor_bfm
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package apb_slave_pkg
+-- Compiling module apb_slave_agent_bfm
+-- Compiling module apb4_peripheral
+-- Compiling module Master_VIP_Slave_IP_hdl_top
+-- Compiling module Master_VIP_Slave_IP_hvl_top
+-- Importing package Master_VIP_Slave_IP_test_pkg
+-- Importing package apb_master_pkg
+-- Importing package apb_env_pkg
+-- Importing package apb_master_seq_pkg
+-- Importing package apb_slave_seq_pkg
+-- Importing package Master_VIP_Slave_IP_virtual_seq_pkg
+
+Top level modules:
+	Master_VIP_Slave_IP_hdl_top
+	Master_VIP_Slave_IP_hvl_top
+End time: 17:13:47 on Aug 06,2025, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0

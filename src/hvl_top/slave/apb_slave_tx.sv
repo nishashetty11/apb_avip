@@ -56,7 +56,7 @@ class apb_slave_tx extends uvm_sequence_item;
   // Constraints
   //-------------------------------------------------------
   //To randomise the wait states in range of 0 to 3
-  constraint wait_states_c1 {soft no_of_wait_states inside {[0:3]};}
+  constraint wait_states_c1 {soft no_of_wait_states ==0;}
 
   //To randomize the pslverr as NO_ERROR by defualt
   constraint pslverr_c2 {soft pslverr == NO_ERROR;}

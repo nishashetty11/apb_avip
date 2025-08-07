@@ -1,0 +1,280 @@
+# vsim -vopt work.Master_VIP_Slave_IP_hvl_top work.Master_VIP_Slave_IP_hdl_top -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=Master_VIP_Slave_IP_8b_write_read_test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+Master_VIP_Slave_IP_base_test" -l Master_VIP_Slave_IP_8b_write_read_test/Master_VIP_Slave_IP_8b_write_read_test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll Master_VIP_Slave_IP_8b_write_read_test/Master_VIP_Slave_IP_8b_write_read_test_coverage.ucdb; run -all; exit" -wlf Master_VIP_Slave_IP_8b_write_read_test/waveform.wlf 
+# Start time: 15:41:37 on Aug 07,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "apb4_peripheral(fast)".
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.apb_slave_driver_bfm(fast)
+# Loading work.apb_slave_monitor_bfm(fast)
+# Loading work.apb_global_pkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.apb_slave_pkg(fast)
+# Loading work.apb_slave_seq_pkg(fast)
+# Loading work.apb_master_driver_bfm(fast)
+# Loading work.apb_master_monitor_bfm(fast)
+# Loading work.apb_master_pkg(fast)
+# Loading work.apb_master_seq_pkg(fast)
+# Loading work.apb_env_pkg(fast)
+# Loading work.Master_VIP_Slave_IP_virtual_seq_pkg(fast)
+# Loading work.Master_VIP_Slave_IP_test_pkg(fast)
+# Loading work.Master_VIP_Slave_IP_hvl_top(fast)
+# Loading work.Master_VIP_Slave_IP_hdl_top(fast)
+# Loading work.apb_if_sv_unit(fast)
+# Loading work.apb_if(fast__1)
+# Loading work.apb_master_agent_bfm(fast)
+# Loading work.apb_master_driver_bfm_sv_unit(fast)
+# Loading work.apb_master_driver_bfm(fast)
+# Loading work.apb_master_monitor_bfm_sv_unit(fast)
+# Loading work.apb_master_monitor_bfm(fast)
+# Loading work.apb_slave_agent_bfm(fast)
+# Loading work.apb_slave_driver_bfm_sv_unit(fast)
+# Loading work.apb_slave_driver_bfm(fast)
+# Loading work.apb_slave_monitor_bfm_sv_unit(fast)
+# Loading work.apb_slave_monitor_bfm(fast)
+# Loading work.apb4_peripheral(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.apb_if(fast)
+# ** Warning: (vsim-3839) ../../src/tb/Master_VIP_Slave_IP_hdl_top.sv(124): Variable '/Master_VIP_Slave_IP_hdl_top/intf_s[0]/prdata', driven via a port connection, is multiply driven. See ../../../../src/hdl_top/slave_agent_bfm/apb_slave_agent_bfm.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /Master_VIP_Slave_IP_hdl_top/peripheral_inst File: ../../rtl/apb4_peripheral.sv
+# ** Warning: (vsim-3839) ../../src/tb/Master_VIP_Slave_IP_hdl_top.sv(124): Variable '/Master_VIP_Slave_IP_hdl_top/intf_s[0]/pready', driven via a port connection, is multiply driven. See ../../../../src/hdl_top/slave_agent_bfm/apb_slave_agent_bfm.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /Master_VIP_Slave_IP_hdl_top/peripheral_inst File: ../../rtl/apb4_peripheral.sv
+# ** Warning: (vsim-3839) ../../src/tb/Master_VIP_Slave_IP_hdl_top.sv(124): Variable '/Master_VIP_Slave_IP_hdl_top/intf_s[0]/pslverr', driven via a port connection, is multiply driven. See ../../../../src/hdl_top/slave_agent_bfm/apb_slave_agent_bfm.sv(23).
+#    Time: 0 ns  Iteration: 0  Instance: /Master_VIP_Slave_IP_hdl_top/peripheral_inst File: ../../rtl/apb4_peripheral.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# log -r /*
+#  add wave -r /*
+#  coverage save -onexit -assert -directive -cvg -codeAll Master_VIP_Slave_IP_8b_write_read_test/Master_VIP_Slave_IP_8b_write_read_test_coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test Master_VIP_Slave_IP_8b_write_read_test...
+# UVM_INFO ../../src/tb/Master_VIP_Slave_IP_hdl_top.sv(19) @ 0: reporter [HDL_TOP] HDL_TOP
+# UVM_INFO ../../../../src/hdl_top/master_agent_bfm/apb_master_agent_bfm.sv(17) @ 0: reporter [apb master agent bfm] APB MASTER AGENT BFM
+# UVM_INFO ../../../../src/hdl_top/master_agent_bfm/apb_master_driver_bfm.sv(55) @ 0: reporter [APB_MASTER_DRIVER_BFM] APB_MASTER_DRIVER_BFM
+# UVM_INFO ../../../../src/hdl_top/master_agent_bfm/apb_master_monitor_bfm.sv(47) @ 0: reporter [APB_MASTER_MONITOR_BFM] APB MASTER MONITOR BFM
+# UVM_INFO ../../../../src/hdl_top/slave_agent_bfm/apb_slave_agent_bfm.sv(17) @ 0: reporter [apb slave agent bfm] APB SLAVE AGENT BFM
+# UVM_INFO ../../../../src/hdl_top/slave_agent_bfm/apb_slave_driver_bfm.sv(51) @ 0: reporter [APB_SLAVE_DRIVER_BFM] APB_SLAVE_DRIVER_BFM
+# UVM_INFO ../../../../src/hdl_top/slave_agent_bfm/apb_slave_monitor_bfm.sv(48) @ 0: reporter [APB_SLAVE_MONITOR_BFM] APB_SLAVE_MONITOR_BFM
+# UVM_INFO ../../src/tb/test/Master_VIP_Slave_IP_base_test.sv(75) @ 0: uvm_test_top [Master_VIP_Slave_IP_8b_write_read_test] 
+# APB_MASTER_AGENT_CONFIG
+# ----------------------------------------------------------------------
+# Name                              Type                     Size  Value
+# ----------------------------------------------------------------------
+# apb_master_agent_config           apb_master_agent_config  -     @497 
+#   is_active                       integral                 1     1    
+#   has_coverage                    integral                 1     1    
+#   no_of_slaves                    integral                 32    'd1  
+#   master_min_addr_range_array[0]  integral                 32    'h0  
+#   master_max_addr_range_array[0]  integral                 32    'hfff
+# ----------------------------------------------------------------------
+# 
+# UVM_INFO ../../src/tb/test/Master_VIP_Slave_IP_base_test.sv(144) @ 0: uvm_test_top [Master_VIP_Slave_IP_8b_write_read_test] 
+# APB_SLAVE_CONFIG[0]
+# --------------------------------------------------------------------
+# Name                       Type                    Size  Value      
+# --------------------------------------------------------------------
+# apb_slave_agent_config[0]  apb_slave_agent_config  -     @502       
+#   is_active                string                  11    UVM_PASSIVE
+#   slave_id                 integral                32    'd0        
+#   has_coverage             integral                1     1          
+#   max_address              integral                32    'hfff      
+#   min_address              integral                32    'h0        
+# --------------------------------------------------------------------
+# 
+# UVM_INFO ../../src/tb/test/Master_VIP_Slave_IP_base_test.sv(80) @ 0: uvm_test_top [Master_VIP_Slave_IP_8b_write_read_test] 
+# APB_ENV_CONFIG
+# -----------------------------------------------
+# Name                Type            Size  Value
+# -----------------------------------------------
+# apb_env_cfg_h       apb_env_config  -     @496 
+#   has_scoreboard    integral        1     1    
+#   has_virtual_seqr  integral        1     1    
+#   no_of_slaves      integral        32    'd1  
+# -----------------------------------------------
+# 
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# -------------------------------------------------------------------------------------
+# Name                              Type                                    Size  Value
+# -------------------------------------------------------------------------------------
+# uvm_test_top                      Master_VIP_Slave_IP_8b_write_read_test  -     @473 
+#   apb_env                         apb_env                                 -     @511 
+#     apb_master_agent              apb_master_agent                        -     @520 
+#       apb_master_cov_h            apb_master_coverage                     -     @893 
+#         analysis_imp              uvm_analysis_imp                        -     @900 
+#       apb_master_drv_proxy_h      apb_master_driver_proxy                 -     @746 
+#         rsp_port                  uvm_analysis_port                       -     @761 
+#         seq_item_port             uvm_seq_item_pull_port                  -     @753 
+#       apb_master_mon_proxy_h      apb_master_monitor_proxy                -     @878 
+#         apb_master_analysis_port  uvm_analysis_port                       -     @885 
+#       apb_master_seqr_h           apb_master_sequencer                    -     @769 
+#         rsp_export                uvm_analysis_export                     -     @776 
+#         seq_item_export           uvm_seq_item_pull_imp                   -     @870 
+#         arbitration_queue         array                                   0     -    
+#         lock_queue                array                                   0     -    
+#         num_last_reqs             integral                                32    'd1  
+#         num_last_rsps             integral                                32    'd1  
+#     apb_scoreboard_h              apb_scoreboard                          -     @643 
+#       apb_master_analysis_fifo    uvm_tlm_analysis_fifo #(T)              -     @650 
+#         analysis_export           uvm_analysis_imp                        -     @689 
+#         get_ap                    uvm_analysis_port                       -     @681 
+#         get_peek_export           uvm_get_peek_imp                        -     @665 
+#         put_ap                    uvm_analysis_port                       -     @673 
+#         put_export                uvm_put_imp                             -     @657 
+#       apb_slave_analysis_fifo[0]  uvm_tlm_analysis_fifo #(T)              -     @697 
+#         analysis_export           uvm_analysis_imp                        -     @736 
+#         get_ap                    uvm_analysis_port                       -     @728 
+#         get_peek_export           uvm_get_peek_imp                        -     @712 
+#         put_ap                    uvm_analysis_port                       -     @720 
+#         put_export                uvm_put_imp                             -     @704 
+#     apb_slave_agent_h[0]          apb_slave_agent                         -     @527 
+#       apb_slave_cov_h             apb_slave_coverage                      -     @932 
+#         analysis_imp              uvm_analysis_imp                        -     @939 
+#       apb_slave_mon_proxy_h       apb_slave_monitor_proxy                 -     @917 
+#         apb_slave_analysis_port   uvm_analysis_port                       -     @924 
+#     apb_virtual_seqr_h            apb_virtual_sequencer                   -     @534 
+#       rsp_export                  uvm_analysis_export                     -     @541 
+#       seq_item_export             uvm_seq_item_pull_imp                   -     @635 
+#       arbitration_queue           array                                   0     -    
+#       lock_queue                  array                                   0     -    
+#       num_last_reqs               integral                                32    'd1  
+#       num_last_rsps               integral                                32    'd1  
+# -------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../../src/tb/test/Master_VIP_Slave_IP_8b_write_read_test.sv(35) @ 0: uvm_test_top [Master_VIP_Slave_IP_8b_write_read_test] Master_VIP_Slave_IP_8b_write_read_test
+# UVM_INFO ../../../../src/hvl_top/slave/apb_slave_monitor_proxy.sv(85) @ 0: uvm_test_top.apb_env.apb_slave_agent_h[0].apb_slave_mon_proxy_h [apb_slave_monitor_proxy] Inside the slave_monitor_proxy
+# UVM_INFO ../../../../src/hvl_top/master//apb_master_monitor_proxy.sv(84) @ 0: uvm_test_top.apb_env.apb_master_agent.apb_master_mon_proxy_h [apb_master_monitor_proxy] Inside the master_monitor_proxy
+# UVM_INFO ../../../../src/hdl_top/master_agent_bfm/apb_master_driver_bfm.sv(103) @ 50: reporter [DEBUG_MSHA] drive_apb_idle state = IDLE and state = 1
+# -------------------------------------------------------------------------------
+# Name                          Type           Size  Value                       
+# -------------------------------------------------------------------------------
+# req                           apb_master_tx  -     @979                        
+#   pselx                       string         7     SLAVE_0                     
+#   paddr                       integral       32    'h8                         
+#   pwrite                      string         5     WRITE                       
+#   pwdata                      integral       32    'ha48d7b44                  
+#   transfer_size               string         5     BIT_8                       
+#   pstrb                       integral       4     'b10                        
+#   pprot                       string         28    NORMAL_NONSECURE_INSTRUCTION
+#   prdata                      integral       32    'h0                         
+#   pslverr                     string         8     NO_ERROR                    
+#   no_of_wait_states_detected  integral       32    'd0                         
+# -------------------------------------------------------------------------------
+# UVM_INFO ../../../../src/hdl_top/master_agent_bfm/apb_master_driver_bfm.sv(134) @ 70: reporter [DEBUG_MSHA] drive_apb_setup state = SETUP and state = 2
+# UVM_INFO ../../../../src/hvl_top/master//apb_master_driver_proxy.sv(119) @ 150: uvm_test_top.apb_env.apb_master_agent.apb_master_drv_proxy_h [apb_master_driver_proxy] AFTER :: received req packet 
+#  -------------------------------------------------------------------------------
+# Name                          Type           Size  Value                       
+# -------------------------------------------------------------------------------
+# req                           apb_master_tx  -     @979                        
+#   pselx                       string         7     SLAVE_0                     
+#   paddr                       integral       32    'h8                         
+#   pwrite                      string         5     WRITE                       
+#   pwdata                      integral       32    'ha48d7b44                  
+#   transfer_size               string         5     BIT_8                       
+#   pstrb                       integral       4     'b10                        
+#   pprot                       string         28    NORMAL_NONSECURE_INSTRUCTION
+#   prdata                      integral       32    'h0                         
+#   pslverr                     string         8     NO_ERROR                    
+#   no_of_wait_states_detected  integral       32    'd2                         
+# -------------------------------------------------------------------------------
+# 
+# ----------------------------------------------------------------------------------
+# Name                          Type           Size  Value                          
+# ----------------------------------------------------------------------------------
+# req                           apb_master_tx  -     @983                           
+#   pselx                       string         7     SLAVE_0                        
+#   paddr                       integral       32    'h8                            
+#   pwrite                      string         4     READ                           
+#   pwdata                      integral       32    'h88777d83                     
+#   transfer_size               string         5     BIT_8                          
+#   pstrb                       integral       4     'b1                            
+#   pprot                       string         31    PRIVILEGED_NONSECURE_INSTUCTION
+#   prdata                      integral       32    'h0                            
+#   pslverr                     string         8     NO_ERROR                       
+#   no_of_wait_states_detected  integral       32    'd0                            
+# ----------------------------------------------------------------------------------
+# UVM_INFO ../../../../src/hdl_top/master_agent_bfm/apb_master_driver_bfm.sv(134) @ 170: reporter [DEBUG_MSHA] drive_apb_setup state = SETUP and state = 2
+# UVM_INFO ../../../../src/hvl_top/master//apb_master_driver_proxy.sv(119) @ 250: uvm_test_top.apb_env.apb_master_agent.apb_master_drv_proxy_h [apb_master_driver_proxy] AFTER :: received req packet 
+#  ----------------------------------------------------------------------------------
+# Name                          Type           Size  Value                          
+# ----------------------------------------------------------------------------------
+# req                           apb_master_tx  -     @983                           
+#   pselx                       string         7     SLAVE_0                        
+#   paddr                       integral       32    'h8                            
+#   pwrite                      string         4     READ                           
+#   pwdata                      integral       32    'h88777d83                     
+#   transfer_size               string         5     BIT_8                          
+#   pstrb                       integral       4     'b1                            
+#   pprot                       string         31    PRIVILEGED_NONSECURE_INSTUCTION
+#   prdata                      integral       32    'h7b00                         
+#   pslverr                     string         8     NO_ERROR                       
+#   no_of_wait_states_detected  integral       32    'd2                            
+# ----------------------------------------------------------------------------------
+# 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 1250: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../../../../src/hvl_top/master//apb_master_coverage.sv(121) @ 1250: uvm_test_top.apb_env.apb_master_agent.apb_master_cov_h [apb_master_coverage] APB Master Agent Coverage = 26.91 %
+# UVM_INFO ../../../../src/hvl_top/slave/apb_slave_coverage.sv(98) @ 1250: uvm_test_top.apb_env.apb_slave_agent_h[0].apb_slave_cov_h [apb_slave_coverage] Slave Agent Coverage = 0.00 %
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   25
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [APB_MASTER_DRIVER_BFM]     1
+# [APB_MASTER_MONITOR_BFM]     1
+# [APB_SLAVE_DRIVER_BFM]     1
+# [APB_SLAVE_MONITOR_BFM]     1
+# [DEBUG_MSHA]     3
+# [HDL_TOP]     1
+# [Master_VIP_Slave_IP_8b_write_read_test]     4
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [apb master agent bfm]     1
+# [apb slave agent bfm]     1
+# [apb_master_coverage]     1
+# [apb_master_driver_proxy]     2
+# [apb_master_monitor_proxy]     1
+# [apb_slave_coverage]     1
+# [apb_slave_monitor_proxy]     1
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1250 ns  Iteration: 53  Instance: /Master_VIP_Slave_IP_hvl_top
+# Saving coverage database on exit...
+# End time: 15:41:41 on Aug 07,2025, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 3

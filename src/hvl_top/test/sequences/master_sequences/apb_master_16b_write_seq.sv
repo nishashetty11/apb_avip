@@ -7,7 +7,7 @@
 //--------------------------------------------------------------------------------------------
 class apb_master_16b_write_seq extends apb_master_base_seq;
   `uvm_object_utils(apb_master_16b_write_seq)
-
+  rand bit [ADDRESS_WIDTH-1:0]address_seq;
   //-------------------------------------------------------
   // Externally defined Tasks and Functions
   //-------------------------------------------------------
@@ -38,11 +38,15 @@ task apb_master_16b_write_seq::body();
   req.apb_master_agent_cfg_h = p_sequencer.apb_master_agent_cfg_h;
   start_item(req);
   `uvm_info(get_type_name(),"req_print",UVM_LOW);
-  if(!req.randomize() with {req.pselx == SLAVE_0; 
+  if(!req.randomize() with {req.pselx == SLAVE_0;
+                            paddr == address_seq;
                             req.pwrite == WRITE;
                             req.transfer_size == BIT_16;}) begin
     `uvm_fatal("APB","Rand failed")
   end
+   req.paddr = address_seq;
+  req.print();
+
   finish_item(req);
 endtask : body
 

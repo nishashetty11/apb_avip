@@ -1,0 +1,36 @@
+var g_data = {
+f687:{
+scopes:[{s:'28',b:'1',val:'Master_VIP_Slave_IP_hdl_top'},{link:'z.htm?f=0&s=687',val:'peripheral_inst'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg718',items:[{c:'Y',p:'80.00',z:'current_state'}
+,{cr:'c',s:'1',z:'IDLE',h:'7',c:'g'}
+,{cr:'c',z:'IDLE -> SETUP',h:'2',c:'g'}
+,{cr:'c',s:'1',z:'SETUP',h:'2',c:'g'}
+,{cr:'m',z:'SETUP -> IDLE',h:'0',c:'r'}
+,{cr:'c',z:'SETUP -> ACCESS',h:'2',c:'g'}
+,{cr:'c',s:'1',z:'ACCESS',h:'4',c:'g'}
+,{cr:'c',z:'ACCESS -> IDLE',h:'2',c:'g'}
+,{cr:'m',z:'ACCESS -> SETUP',h:'0',c:'r'}
+]}
+
+],
+},
+f25:{
+scopes:[{link:'z.htm?f=0&s=25',val:'work.apb4_peripheral'}]
+,FSMs:[{dummy:0}
+,{anchor:'cvg4344',items:[{c:'Y',p:'80.00',z:'current_state'}
+,{cr:'c',s:'1',z:'IDLE',h:'7',c:'g'}
+,{cr:'c',z:'IDLE -> SETUP',h:'2',c:'g'}
+,{cr:'c',s:'1',z:'SETUP',h:'2',c:'g'}
+,{cr:'m',z:'SETUP -> IDLE',h:'0',c:'r'}
+,{cr:'c',z:'SETUP -> ACCESS',h:'2',c:'g'}
+,{cr:'c',s:'1',z:'ACCESS',h:'4',c:'g'}
+,{cr:'c',z:'ACCESS -> IDLE',h:'2',c:'g'}
+,{cr:'m',z:'ACCESS -> SETUP',h:'0',c:'r'}
+]}
+
+],
+},
+dummyEnd:0
+};
+processFsmData(g_data);
